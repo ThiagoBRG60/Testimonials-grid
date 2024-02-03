@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600&display=swap');
+
+:root {
+  --violet: hsl(263, 55%, 52%);
+  --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --White: hsl(0, 0%, 100%);
+  --Light-gray: hsl(0, 0%, 81%);
+  --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--Light-grayish-blue);
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}
+section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.grid {
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-areas: 
+  'first-review first-review first-review first-review second-review third-review'
+  'fourth-review fifth-review fifth-review fifth-review fifth-review third-review'
+  ;
+  gap: 30px;
+}
+.first {
+  background: url(./images/bg-pattern-quotation.svg) no-repeat 360px top;
+  background-size: 130px;
+}
+.first .reviewer-pic img {
+  border: 2px solid #ffffff69;
+}
+.fifth .reviewer-pic img {
+  border: 2px solid var(--violet);
+}
+.grid div {
+  border-radius: 10px;
+}
+.grid div img {
+  border-radius: 50%;
+  width: 30px;
+}
+.grid div h2 {
+  margin-top: 20px;
+}
+.grid div span {
+  font-weight: 600;
+}
+.light-heading {
+  color: var(--White);
+}
+.dark-heading {
+  color: var(--Very-dark-grayish-blue);
+}
+.review-description {
+  margin-top: 20px;
+  font-size: 15px;
+  opacity: 70%;
+}
+.light-review-description {
+  color: var(--White);
+}
+.dark-review-description {
+  color: var(--Very-dark-grayish-blue);
+}
+.light-name, .light-name-description {
+  color: var(--White);
+}
+.light-name-description, .dark-name-description {
+  opacity: 50%;
+  font-size: 14px;
+}
+.dark-name, .dark-name-description {
+  color: var(--Very-dark-grayish-blue);
+}
+.first, .second, .third, .fourth, .fifth {
+  padding: 40px;
+}
+.first {
+  grid-area: first-review;
+  background-color: var(--violet);
+}
+.second h2, .third h2, .fourth h2 {
+  font-size: 20px;
+}
+.first h2, .fifth h2 {
+  font-size: 21px;
+}
+.second {
+  grid-area: second-review;
+  background-color: var(--Very-dark-grayish-blue);
+}
+.third {
+  grid-area: third-review;
+  background-color: var(--White);
+  box-shadow: 2px 5px 10px #00000028;
+}
+.fourth {
+  grid-area: fourth-review;
+  background-color: var(--White);
+  box-shadow: 2px 5px 10px #00000028;
+}
+.fifth {
+  grid-area: fifth-review;
+  background-color: var(--Very-dark-blackish-blue);
+}
+.reviewer-pic {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}

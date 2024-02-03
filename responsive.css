@@ -1,0 +1,28 @@
+@media (max-width: 430px) {
+  section {
+    padding: 40px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .grid {
+    height: 100px;
+    grid-template-areas:
+      "first-review"
+      "first-review"
+      "first-review"
+      "first-review"
+      "second-review"
+      "fourth-review"
+      "fifth-review"
+      "fifth-review"
+      "fifth-review"
+      "fifth-review"
+      "third-review";
+  }
+  .first {
+    background-position: 170px top;
+    background-size: 100px;
+  }
+}
